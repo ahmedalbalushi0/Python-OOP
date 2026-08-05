@@ -5,7 +5,7 @@ class Student:
         self.marks = marks
         print("Welcome",self.name)
 
-    @staticmethod
+    @staticmethod #decorator
     def uni_name():
         print("UTAS Muscat")
 
