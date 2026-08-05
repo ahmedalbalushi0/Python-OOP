@@ -9,5 +9,9 @@ class Student():
     def welcome(self):
         print("welcome",self.name,"from",self.university_name)
 
+    def get_major(self):
+        return self.major
+
 s1 = Student("Omar","IT")
 s1.welcome()
+print(s1.get_major())
