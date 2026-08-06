@@ -8,13 +8,19 @@ class Account:
     def debit(self,amount):
         self.balance -=amount
         print(amount,"OMR was debited from your account",self.account_no)
+        print("Current balance:",self.get_balance())
 
     #credit method
     def credit(self,amount):
         self.balance += amount
         print(amount,"OMR was credited from your accont",self.account_no)
+        print("Current balance:",self.get_balance())
 
-acc1 = Account(1,1000)
+    #final balance
+    def get_balance(self):
+        return self.balance
+
+acc1 = Account(13864761,0)
 print("Account No. :",acc1.account_no,"\nAcount Balance:",acc1.balance)
-acc1.debit(500)
-acc1.credit(10)
+acc1.credit(750)
+acc1.debit(110)
