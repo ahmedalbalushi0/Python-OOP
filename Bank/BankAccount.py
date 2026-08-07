@@ -1,7 +1,8 @@
 class Account:
     
-    def __init__(self, acc, bal):
-        self.account_no = acc
+    def __init__(self, acc_no,acc_pass, bal):
+        self.account_no = acc_no
+        self.__acc_pass = acc_pass #private attribute
         self.balance = bal
 
     #debit method
@@ -13,14 +14,14 @@ class Account:
     #credit method
     def credit(self,amount):
         self.balance += amount
-        print(amount,"OMR was credited from your accont",self.account_no)
+        print(amount,"OMR was credited to your accont",self.account_no)
         print("Current balance:",self.get_balance())
 
     #final balance
     def get_balance(self):
         return self.balance
 
-acc1 = Account(13864761,0)
+acc1 = Account(13864761,"F5pi1",0)
 print("Account No. :",acc1.account_no,"\nAcount Balance:",acc1.balance)
 acc1.credit(750)
 acc1.debit(110)
