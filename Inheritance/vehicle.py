@@ -9,11 +9,15 @@ class Car:
         print("car stopped")
 
 class ToyotaCar(Car): #inheritance
-    def __init__(self, name):
-        self.name = name
+    def __init__(self, brand):
+        self.brand = brand
 
-car1 = ToyotaCar("Supra")
-car2 = ToyotaCar("4Runner")
-print(car1.name)
+class Supra(ToyotaCar):
+    def __init__(self,type):
+        super().__init__("Toyota")
+        self.type = type
+
+car1 = Supra("Petrol")
+print(car1.brand)
 print(car1.start())
 print(car1.color)
